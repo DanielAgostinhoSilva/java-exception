@@ -1,6 +1,6 @@
 package br.com.javapilha;
 
-public class Main {
+public class Fluxo {
 
     public static void main(String[] args) {
         System.out.println("Inicio do main");
