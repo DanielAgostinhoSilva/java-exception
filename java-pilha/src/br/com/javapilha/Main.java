@@ -6,8 +6,10 @@ public class Main {
         System.out.println("Inicio do main");
         try {
             metodo1();
-        } catch (ArithmeticException e) {
-            System.out.println("ArithmeticException");
+        } catch (ArithmeticException | NullPointerException e) {
+//            String message = e.getMessage();
+//            System.out.println("ArithmeticException: " + message);
+            e.printStackTrace();
         }
         System.out.println("Fim do main");
     }
@@ -22,7 +24,8 @@ public class Main {
         System.out.println("Inicio do metodo 2");
         for (int i = 1; i <= 5; i++) {
             System.out.println(i);
-            int a = i / 0;
+            Conta conta = null;
+            conta.deposita();
         }
         System.out.println("Fim do metodo 2");
     }
