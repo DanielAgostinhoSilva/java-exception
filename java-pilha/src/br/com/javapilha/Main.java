@@ -4,7 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Inicio do main");
-        metodo1();
+        try {
+            metodo1();
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException");
+        }
         System.out.println("Fim do main");
     }
 
@@ -16,7 +20,7 @@ public class Main {
 
     private static void metodo2() {
         System.out.println("Inicio do metodo 2");
-        for(int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 5; i++) {
             System.out.println(i);
             int a = i / 0;
         }
